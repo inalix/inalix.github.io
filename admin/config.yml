@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: inalix/belajar
+  branch: main
+  base_url: https://sve-auth.styawan.workers.dev
+
+media_libraries:
+  all:
+    transformations:
+      raster_image:
+        format: webp
+        quality: 85
+        width: 1024
+        height: 1024
+      svg:
+        optimize: true
+
+media_folder: /public/media
+public_folder: /media
+
+collections:
+  - name: products
+    label: Products
+    label_singular: Product
+    folder: /content/products
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Thumbnail, name: thumbnail, widget: image }
+      - { label: Body, name: body, widget: richtext }
+      - { label: Gallery, name: gallery, widget: image, multiple: true }
+
+  - name: news
+    label: News
+    label_singular: News
+    folder: /content/news
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Author, name: author, widget: string }
+      - { label: Date, name: date, widget: datetime, type: date }
+      - { label: Body, name: body, widget: richtext }
+
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: /content/pages
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: richtext }
