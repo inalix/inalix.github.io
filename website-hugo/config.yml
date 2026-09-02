@@ -55,12 +55,14 @@ collections:
     identifier_field: name
     folder: /content/office
     path: "{{slug}}/index"
-    media_folder: images
-    public_folder: images
+    media_folder: media
+    public_folder: media
     fields:
       - { label: Name, name: name, widget: string }
       - { label: Address, name: address, widget: richtext }
       - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Location, name: point, widget: map, required: false}
+      - { label: Image, name: image, widget: image, multiple: true , required: false}
   
   - name: division
     label: Division
@@ -69,8 +71,6 @@ collections:
     folder: /content/division
     fields:
       - { label: Name Division, name: name, widget: string }
-      
-
 
   - name: team
     label: Team
