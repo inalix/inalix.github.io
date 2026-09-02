@@ -41,8 +41,37 @@ collections:
     folder: /content/english/news
     fields:
       - { label: Title, name: title, widget: string }
+      - { label: Draft, name: draft, widget: boolean }
+      - { label: Image, name: image, widget: image, multiple: true }
+      - { label: Meta Title, name: meta_title, widget: string }
+      - { label: Description , name: description, widget: string }
       - { label: Author, name: author, widget: string }
       - { label: Date, name: date, widget: datetime, type: date }
+      - { label: Body, name: body, widget: richtext }
+
+  - name: office
+    label: Office
+    label_singular: Office
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Address, name: address, widget: richtext }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+
+
+  - name: team
+    label: Team
+    label_singular: team
+    folder: /content/team
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Profile Picture, name: photo, widget: image }
+      - { label: Job Title, name: title, widget: string }
+      - { label: Division, name: division, widget: string }
+      - { label: Office, name: office, widget: relation, collection: office }
+      - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: richtext }
 
   - name: pages
