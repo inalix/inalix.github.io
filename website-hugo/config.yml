@@ -61,6 +61,7 @@ collections:
   - name: division
     label: Division
     label_singular: division
+    identifier_field: name
     folder: /content/division
     fields:
       - { label: Name Division, name: name, widget: string }
