@@ -52,7 +52,11 @@ collections:
   - name: office
     label: Office
     label_singular: Office
+    identifier_field: name
     folder: /content/office
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
     fields:
       - { label: Name, name: name, widget: string }
       - { label: Address, name: address, widget: richtext }
