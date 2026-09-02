@@ -86,7 +86,7 @@ collections:
       - { label: Division, name: division, widget: relation, collection: division, search_fields: ["name"], value_field: name, display_fields: ["name"] }
       - { label: Office, name: office, widget: relation, collection: office }
       - { label: Draft, name: draft, widget: boolean, default: false }
-      - { label: Body, name: body, widget: richtext }
+      - { label: Body, name: body, widget: richtext, required: false }
 
   - name: pages
     label: Pages
