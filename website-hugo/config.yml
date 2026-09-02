@@ -52,6 +52,7 @@ collections:
   - name: office
     label: Office
     label_singular: Office
+    folder: /content/office
     fields:
       - { label: Name, name: name, widget: string }
       - { label: Address, name: address, widget: richtext }
