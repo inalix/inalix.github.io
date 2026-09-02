@@ -36,8 +36,8 @@ collections:
       - { label: Gallery, name: gallery, widget: image, multiple: true }
 
   - name: news
-    label: News
-    label_singular: News
+    label: Newse
+    label_singular: Newsa
     folder: /content/engish/news
     fields:
       - { label: Title, name: title, widget: string }
