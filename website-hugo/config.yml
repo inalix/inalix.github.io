@@ -89,6 +89,20 @@ collections:
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: richtext, required: false }
 
+  - name: clients
+    label: Clients 
+    identifier_field: name
+    label_singular: client
+    folder: /content/clients
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Address, name: address, widget: richtext }
+      - { label: Image, name: image, widget: image, multiple: false , required: true}
+      - { label: Draft, name: draft, widget: boolean, default: false }
+
   - name: pages
     label: Pages
     label_singular: Page
