@@ -50,7 +50,7 @@ collections:
       - { label: Body, name: body, widget: richtext }
 
   - name: office
-    label: Office
+    label: Offices
     label_singular: Office
     identifier_field: name
     folder: /content/office
@@ -65,7 +65,7 @@ collections:
       - { label: Image, name: image, widget: image, multiple: true , required: false}
   
   - name: division
-    label: Division
+    label: Divisions
     label_singular: division
     identifier_field: name
     folder: /content/division
@@ -73,7 +73,7 @@ collections:
       - { label: Name Division, name: name, widget: string }
 
   - name: team
-    label: Team 
+    label: Teams
     identifier_field: name
     label_singular: team
     folder: /content/team
