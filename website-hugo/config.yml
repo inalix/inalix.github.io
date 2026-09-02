@@ -38,7 +38,7 @@ collections:
   - name: news
     label: News
     label_singular: News
-    folder: /content/news
+    folder: /content/engish/news
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Author, name: author, widget: string }
