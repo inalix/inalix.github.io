@@ -73,7 +73,8 @@ collections:
       - { label: Name Division, name: name, widget: string }
 
   - name: team
-    label: Team
+    label: Team 
+    identifier_field: name
     label_singular: team
     folder: /content/team
     path: "{{slug}}/index"
