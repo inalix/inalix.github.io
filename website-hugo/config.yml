@@ -46,7 +46,7 @@ collections:
       - { label: Meta Title, name: meta_title, widget: string }
       - { label: Description , name: description, widget: string }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name"], value_field: name, display_fields: ["name"] } 
-      - { label: Industry, name: industry, widget: relation, collection: industry, search_fields: ["name"], value_field: name, display_fields: ["name"] }
+      - { label: Solution, name: solution, widget: relation, collection: solution, search_fields: ["name"], value_field: name, display_fields: ["name"] }
       - { label: Date, name: date, widget: datetime, type: date }
       - { label: Body, name: body, widget: richtext }
 
