@@ -112,10 +112,10 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: richtext }
       
-  - name: industry
-    label: Industry
-    label_singular: Industry
+  - name: solutions
+    label: Solution
+    label_singular: Solution
     identifier_field: name
-    folder: /content/industry
+    folder: /content/solution
     fields:
-      - { label: Industry Name, name: name, widget: string }
+      - { label: Solution Name, name: name, widget: string }
