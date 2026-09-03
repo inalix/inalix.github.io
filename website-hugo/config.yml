@@ -110,3 +110,11 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: richtext }
+      
+  - name: Industry
+    label: Industry
+    label_singular: industry
+    identifier_field: name
+    folder: /content/industry
+    fields:
+      - { label: Industry Name, name: name, widget: string }
