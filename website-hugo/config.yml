@@ -85,7 +85,7 @@ collections:
       - { label: Name, name: name, widget: string }
       - { label: Profile Picture, name: photo, widget: image }
       - { label: Job Title, name: title, widget: string }
-      - { label: Division, name: division, widget: relation, collection: division, search_fields: ["name"], value_field: name, display_fields: ["name"] }
+      - { label: Division, name: division, widget: relation, collection: division, default: Pilih Divisi, search_fields: ["name"], value_field: name, display_fields: ["name"] }
       - { label: Office, name: office, widget: relation, collection: office }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: richtext, required: false }
