@@ -111,4 +111,11 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: richtext }
-      
+  
+  - name: solutions
+    label: Solution
+    label_singular: Solution
+    identifier_field: name
+    folder: /content/solution
+    fields:
+      - { label: Solution Name, name: name, widget: string }
