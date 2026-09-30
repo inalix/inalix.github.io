@@ -7,7 +7,7 @@ backend:
   base_url: https://sve-auth.styawan.workers.dev
 
 i18n:
-  structure: multiple_root_folders
+  structure: multiple_folders
   locales: [en, id]
 
 media_libraries:
@@ -28,7 +28,7 @@ collections:
   - name: products
     label: Products
     label_singular: Product
-    folder: /content/products
+    folder: /content/{{locale}}/products
     # path: "{{slug}}/index"
     # media_folder: images
     # public_folder: images
