@@ -45,7 +45,11 @@ collections:
   - name: news
     label: News
     label_singular: News
-    folder: /content/english/news
+    folder: /content/{{locale}}/news
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    i18n: true
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Draft, name: draft, widget: boolean }
@@ -57,14 +61,28 @@ collections:
       - { label: Date, name: date, widget: datetime, type: date }
       - { label: Body, name: body, widget: richtext }
 
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: /content/{{locale}}/pages
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    preview: false
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: richtext }
+
   - name: office
     label: Offices
     label_singular: Office
     identifier_field: name
     folder: /content/office
     path: "{{slug}}/index"
-    media_folder: media
-    public_folder: media
+    media_folder: images
+    public_folder: images
+    i18n: false
     fields:
       - { label: Name, name: name, widget: string }
       - { label: Address, name: address, widget: richtext }
@@ -77,6 +95,8 @@ collections:
     label_singular: division
     identifier_field: name
     folder: /content/division
+    preview: false
+    i18n: false
     fields:
       - { label: Name Division, name: name, widget: string }
 
@@ -88,6 +108,7 @@ collections:
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
+    i18n: false
     fields:
       - { label: Name, name: name, widget: string }
       - { label: Profile Picture, name: photo, widget: image }
@@ -105,24 +126,21 @@ collections:
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
+    preview: false
+    i18n: false
     fields:
       - { label: Name, name: name, widget: string }
       - { label: Address, name: address, widget: richtext }
       - { label: Image, name: image, widget: image, multiple: false , required: true}
       - { label: Draft, name: draft, widget: boolean, default: false }
 
-  - name: pages
-    label: Pages
-    label_singular: Page
-    folder: /content/pages
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: richtext }
   
   - name: solution
     label: Solutions
     label_singular: Solution
     identifier_field: name
     folder: /content/solution
+    preview: false
+    i18n: false
     fields:
       - { label: Solution Name, name: name, widget: string }
