@@ -53,7 +53,7 @@ collections:
       - { label: Title, name: title, widget: string, i18n: true }
       - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
       - { label: Image, name: image, widget: image, multiple: true, i18n: duplicate }
-      - { label: Meta Title, name: meta_title, widget: string, i18n: true }
+      - { label: Meta Title, name: meta_title, widget: compute, value: "{{title}} | INALIX", i18n: true }
       - { label: Description , name: description, widget: string, i18n: true }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "{{slug}}", display_fields: ["name", "title"], i18n: duplicate } 
       - { label: Solution, name: solution, widget: relation, collection: solution, search_fields: ["name"], value_field: "{{slug}}", display_fields: ["name"], i18n: duplicate }
