@@ -6,6 +6,10 @@ backend:
   branch: main
   base_url: https://sve-auth.styawan.workers.dev
 
+i18n:
+  structure: multiple_root_folders
+  locales: [en, id]
+
 media_libraries:
   all:
     transformations:
@@ -25,14 +29,17 @@ collections:
     label: Products
     label_singular: Product
     folder: /content/products
-    path: "{{slug}}/index"
-    media_folder: images
-    public_folder: images
+    # path: "{{slug}}/index"
+    # media_folder: images
+    # public_folder: images
     preview: false
+    i18n: true
+
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Thumbnail, name: thumbnail, widget: image }
       - { label: Body, name: body, widget: richtext }
+      - { label: Image, name: image, widget: image }
       - { label: Gallery, name: gallery, widget: image, multiple: true }
 
   - name: news
