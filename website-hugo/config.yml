@@ -29,9 +29,9 @@ collections:
     label: Products
     label_singular: Product
     folder: /content/{{locale}}/products
-    # path: "{{slug}}/index"
-    # media_folder: images
-    # public_folder: images
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
     preview: false
     i18n: true
 
