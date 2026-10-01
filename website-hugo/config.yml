@@ -36,7 +36,7 @@ collections:
     i18n: true
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Thumbnail, name: thumbnail, widget: image, i18n: duplicate }
+     # - { label: Thumbnail, name: thumbnail, widget: image, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate }
@@ -44,7 +44,7 @@ collections:
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
       - { label: Body, name: body, widget: richtext, i18n: true }
       - { label: Image, name: image, widget: image, i18n: duplicate }
-      - { label: Gallery, name: gallery, widget: image, multiple: true, i18n: duplicate }
+   #  - { label: Gallery, name: gallery, widget: image, multiple: true, i18n: duplicate }
       
 
   - name: news
