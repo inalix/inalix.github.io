@@ -91,13 +91,13 @@ collections:
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
-    i18n: false
+    i18n: true
     fields:
-      - { label: Name, name: name, widget: string }
-      - { label: Address, name: address, widget: richtext }
-      - { label: Draft, name: draft, widget: boolean, default: false }
-      - { label: Location, name: point, widget: map, required: false}
-      - { label: Image, name: image, widget: image, required: false}
+      - { label: Name, name: name, widget: string, i18n: duplicate }
+      - { label: Address, name: address, widget: richtext, i18n: duplicate }
+      - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
+      - { label: Location, name: point, widget: map, required: false, i18n: duplicate}
+      - { label: Image, name: image, widget: image, required: false, i18n: duplicate}
   
   - name: division
     label: Divisions
@@ -105,9 +105,9 @@ collections:
     identifier_field: name
     folder: /content/{{locale}}/division
     preview: false
-    i18n: false
+    i18n: true
     fields:
-      - { label: Name Division, name: name, widget: string }
+      - { label: Name Division, name: name, widget: string, i18n: duplicate }
 
   - name: team
     label: Teams
@@ -117,15 +117,15 @@ collections:
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
-    i18n: false
+    i18n: true
     fields:
-      - { label: Name, name: name, widget: string }
-      - { label: Profile Picture, name: photo, widget: image }
-      - { label: Job Title, name: title, widget: string }
-      - { label: Division, name: division, widget: relation, collection: division, default: "project", search_fields: ["name"], value_field: "{{slug}}", display_fields: ["name"] }
-      - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: "{{slug}}", display_fields: ["name"] }
-      - { label: Draft, name: draft, widget: boolean, default: false }
-      - { label: Body, name: body, widget: richtext, required: false }
+      - { label: Name, name: name, widget: string, i18n: duplicate }
+      - { label: Profile Picture, name: photo, widget: image, i18n: duplicate }
+      - { label: Job Title, name: title, widget: string, i18n: duplicate }
+      - { label: Division, name: division, widget: relation, collection: division, default: "project", search_fields: ["name"], value_field: "{{slug}}", display_fields: ["name"], i18n: duplicate }
+      - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: "{{slug}}", display_fields: ["name"], i18n: duplicate }
+      - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
+      - { label: Body, name: body, widget: richtext, required: false, i18n: duplicate }
 
   - name: clients
     label: Clients 
@@ -136,12 +136,12 @@ collections:
     media_folder: images
     public_folder: images
     preview: false
-    i18n: false
+    i18n: true
     fields:
-      - { label: Name, name: name, widget: string }
-      - { label: Address, name: address, widget: richtext }
-      - { label: Image, name: image, widget: image, required: true}
-      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Name, name: name, widget: string, i18n: duplicate }
+      - { label: Address, name: address, widget: richtext, i18n: duplicate }
+      - { label: Image, name: image, widget: image, required: true, i18n: duplicate }
+      - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
 
   
   - name: solution
@@ -150,6 +150,6 @@ collections:
     identifier_field: name
     folder: /content/{{locale}}/solution
     preview: false
-    i18n: false
+    i18n: true
     fields:
-      - { label: Solution Name, name: name, widget: string }
+      - { label: Solution Name, name: name, widget: string, i18n: duplicate }
