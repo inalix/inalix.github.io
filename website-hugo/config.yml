@@ -87,7 +87,7 @@ collections:
     label: Offices
     label_singular: Office
     identifier_field: name
-    folder: /content/office
+    folder: /content/{{locale}}/office
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
@@ -97,13 +97,13 @@ collections:
       - { label: Address, name: address, widget: richtext }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Location, name: point, widget: map, required: false}
-      - { label: Image, name: image, widget: image, multiple: false , required: false}
+      - { label: Image, name: image, widget: image, required: false}
   
   - name: division
     label: Divisions
     label_singular: division
     identifier_field: name
-    folder: /content/division
+    folder: /content/{{locale}}/division
     preview: false
     i18n: false
     fields:
@@ -113,7 +113,7 @@ collections:
     label: Teams
     identifier_field: name
     label_singular: team
-    folder: /content/team
+    folder: /content/{{locale}}/team
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
@@ -131,7 +131,7 @@ collections:
     label: Clients 
     identifier_field: name
     label_singular: client
-    folder: /content/clients
+    folder: /content/{{locale}}/clients
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
@@ -140,7 +140,7 @@ collections:
     fields:
       - { label: Name, name: name, widget: string }
       - { label: Address, name: address, widget: richtext }
-      - { label: Image, name: image, widget: image, multiple: false , required: true}
+      - { label: Image, name: image, widget: image, required: true}
       - { label: Draft, name: draft, widget: boolean, default: false }
 
   
@@ -148,7 +148,7 @@ collections:
     label: Solutions
     label_singular: Solution
     identifier_field: name
-    folder: /content/solution
+    folder: /content/{{locale}}/solution
     preview: false
     i18n: false
     fields:
