@@ -36,7 +36,7 @@ collections:
     i18n: true
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Slug/Url, name: slug, widget: string, required: false, i18n: duplicate }
+      - { label: Slug, name: slug, widget: string, required: false, i18n: duplicate }
       - { label: Image, name: image, widget: image, i18n: duplicate }
      # - { label: Thumbnail, name: thumbnail, widget: image, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
