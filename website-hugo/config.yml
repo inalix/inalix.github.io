@@ -40,6 +40,7 @@ collections:
      # - { label: Thumbnail, name: thumbnail, widget: image, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
+      - { label: Date, name: date, widget: datetime, type: date, required: false, i18n: duplicate }
       - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate, required: false }
       - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
