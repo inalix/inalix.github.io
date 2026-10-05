@@ -97,7 +97,7 @@ collections:
       - { label: Address, name: address, widget: richtext }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Location, name: point, widget: map, required: false}
-      - { label: Image, name: image, widget: image, multiple: true , required: false}
+      - { label: Image, name: image, widget: image, multiple: false , required: false}
   
   - name: division
     label: Divisions
