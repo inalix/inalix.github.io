@@ -81,7 +81,8 @@ collections:
     i18n: true
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Description, name: description, widget: string, i18n: true }
+      - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
+      - { label: Description, name: description, widget: string, required: false, i18n: true }
       - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
       - { label: Body, name: body, widget: richtext, i18n: true }
 
