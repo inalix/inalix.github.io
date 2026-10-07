@@ -36,7 +36,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
       - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
-      - { label: Image, name: image, widget: image, multiple: true, i18n: duplicate }
+      - { label: Image, name: image, widget: image, multiple: false, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate, default: ["Projects"] }
@@ -81,7 +81,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
       - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
-      - { label: Image, name: image, widget: image, multiple: true, i18n: duplicate }
+      - { label: Image, name: image, widget: image, multiple: false, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate, default: ["News"] }
