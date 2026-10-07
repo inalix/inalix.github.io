@@ -121,7 +121,7 @@ collections:
                 name: images
                 widget: list
                 fields: 
-                  - { label: Gambar, name: image, widget: image, true: duplicate}
+                  - { label: Gambar, name: image, widget: image, i18n: duplicate}
 
           - { label: Judul Seksi Nilai, name: values_title, widget: string, default: Komitmen kita adalah nilai-nilai kita., i18n: true }
           - label: Daftar Nilai Perusahaan
