@@ -25,6 +25,27 @@ media_folder: /public/media
 public_folder: /media
 
 collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: /content/{{locale}}/projects
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
+      - { label: Image, name: image, widget: image, multiple: true, i18n: duplicate }
+      - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
+      - { label: Description, name: description, widget: string, i18n: true }
+      - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate, default: Projects }
+      - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
+      - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
+      - { label: Solution, name: solution, widget: relation, collection: solution, search_fields: ["name"], value_field: "name", display_fields: ["name"], i18n: duplicate }
+      - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
+      - { label: Body, name: body, widget: richtext, i18n: true }
+      
   - name: products
     label: Products
     label_singular: Product
@@ -63,7 +84,7 @@ collections:
       - { label: Image, name: image, widget: image, multiple: true, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
-      - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate }
+      - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate, default: News }
       - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
       - { label: Solution, name: solution, widget: relation, collection: solution, search_fields: ["name"], value_field: "name", display_fields: ["name"], i18n: duplicate }
