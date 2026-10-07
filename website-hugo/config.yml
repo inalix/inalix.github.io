@@ -73,8 +73,6 @@ collections:
   - name: pages
     label: Pages
     label_singular: Page
-    folder: /content/{{locale}}/pages
-    path: "{{slug}}/index"
     media_folder: images
     public_folder: images
     preview: false
@@ -113,10 +111,7 @@ collections:
           - { label: Judul Seksi Solusi, name: solution_title, widget: string, default: Got a problem? We can give you the solution }
           - { label: Deskripsi Solusi, name: solution_text, widget: text }
 
-          - label: Banner Kutipan
-            name: banner_quote
-            widget: string
-            
+          - { label: Banner Kutipan, name: banner_quote, widget: string }
 
           - label: Daftar FAQ
             name: faqs
