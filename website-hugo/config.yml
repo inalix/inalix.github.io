@@ -98,7 +98,8 @@ collections:
               - label: Galeri Slider Gambar
                 name: images
                 widget: list
-                field: { label: Gambar, widget: image }
+                fields: 
+                  - { label: Gambar, name: image, widget: image }
 
           - { label: Judul Seksi Nilai, name: values_title, widget: string, default: Komitmen kita adalah nilai-nilai kita. }
           - label: Daftar Nilai Perusahaan
@@ -112,12 +113,10 @@ collections:
           - { label: Judul Seksi Solusi, name: solution_title, widget: string, default: Got a problem? We can give you the solution }
           - { label: Deskripsi Solusi, name: solution_text, widget: text }
 
-          - label: Banner Parallax Kutipan
-            name: parallax_quote
-            widget: object
-            fields:
-              - { label: Teks Kutipan Utama, name: text, widget: text }
-              
+          - label: Banner Kutipan
+            name: banner_quote
+            widget: string
+            
 
           - label: Daftar FAQ
             name: faqs
@@ -134,6 +133,7 @@ collections:
               - { label: Ikon Class, name: icon, widget: string, default: stmicon-notebook_b }
               - { label: Deskripsi, name: text, widget: text }
               - { label: Gambar Latar Belakang, name: bg_image, widget: image, required: false }
+
       - name: privacy-policy
         label: Privacy Policy
         file: content/{{locale}}/pages/privacy-policy.md
