@@ -100,14 +100,14 @@ collections:
     files:
       - name: about
         label: About Us
-        file: content/{{locale}}/pages/about/about.md
+        file: content/{{locale}}/pages/about.md
         media_folder: images
         public_folder: images
         i18n: true
         fields:
           - { label: Judul Utama Halaman, name: title, widget: string, default: About Us, i18n: true }
           - { label: Logo Perusahaan, name: logo, widget: image, required: false, i18n: duplicate }
-          - { label: Gambar Header Sejarah, name: history_image, widget: image, required: false, i18n: true }
+          - { label: Gambar Header Sejarah, name: history_image, widget: image, required: false, i18n: duplicate }
           - { label: Judul Sejarah, name: history_title, widget: string, default: History Inalix, i18n: true }
           - { label: Konten Teks Sejarah, name: body, widget: markdown, i18n: true }
           - label: Banner Budaya Kerja
