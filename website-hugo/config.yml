@@ -10,6 +10,10 @@ i18n:
   structure: multiple_folders
   locales: [en, id]
 
+logo:
+  src: logo_inalix_square_default.svg
+  show_in_header: true
+
 media_libraries:
   all:
     transformations:
