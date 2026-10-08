@@ -103,15 +103,14 @@ collections:
   - name: pages
     label: Pages
     label_singular: Page
-    media_folder: /static/images
-    public_folder: /images 
+    
     i18n: true
     files:
       - name: about
         label: About Us
         file: content/{{locale}}/pages/about.md
-        media_folder: /static/images
-        public_folder: /images
+        media_folder: images 
+        public_folder: images
         i18n: true
         fields:
           - { label: Judul Utama Halaman, name: title, widget: string, default: About Us, i18n: true }
