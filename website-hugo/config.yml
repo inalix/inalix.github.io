@@ -93,6 +93,7 @@ collections:
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
       - { label: Solution, name: solution, widget: relation, collection: solution, search_fields: ["name"], value_field: "name", display_fields: ["name"], i18n: duplicate }
       - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
+      - { label: Update Date, name: date_update, widget: datetime, type: date, i18n: duplicate }
       - { label: Body, name: body, widget: richtext, i18n: true }
 
   - name: pages
@@ -110,8 +111,8 @@ collections:
         i18n: true
         fields:
           - { label: Judul Utama Halaman, name: title, widget: string, default: About Us, i18n: true }
-          - { label: Type, name: type: string, default: about, required: false, i18n: duplicate }
-          - { label: layout, name: type: string, default: list, required: false, i18n: duplicate }
+          - { label: Type, name: type, widget: string, default: about, required: false, i18n: duplicate }
+          - { label: Layout, name: layout, widget: string, default: list, required: false, i18n: duplicate }
           - { label: Logo Perusahaan, name: logo, widget: image, required: false, i18n: duplicate }
           - { label: Gambar Header Sejarah, name: history_image, widget: image, required: false, i18n: duplicate }
           - { label: Judul Sejarah, name: history_title, widget: string, default: History Inalix, i18n: true }
