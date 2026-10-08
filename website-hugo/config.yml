@@ -103,7 +103,6 @@ collections:
   - name: pages
     label: Pages
     label_singular: Page
-    folder: /content/{{locale}}/pages
     media_folder: /static/images
     public_folder: /images 
     i18n: true
