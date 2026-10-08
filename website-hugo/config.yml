@@ -134,7 +134,7 @@ collections:
             i18n: true
             fields:
               - { label: Judul Nilai, name: title, widget: string, i18n: true }
-              - { label: Class Ikon, name: icon, widget: string, i18n: true }
+              - { label: Class Ikon, name: icon, widget: string, i18n: duplicate }
               - { label: Deskripsi Penjelasan, name: description, widget: text, i18n: true }
 
           - { label: Judul Seksi Solusi, name: solution_title, widget: string, default: Got a problem? We can give you the solution, i18n: true }
