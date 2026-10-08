@@ -98,13 +98,13 @@ collections:
     public_folder: images 
     i18n: true
     files:
-      - name: about_en
+      - name: about
         label: About Us
-        file: content/en/pages/about/about.md
-        media_folder: content/en/pages/about/images
+        file: content/{{locale}}/pages/about/about.md
+        media_folder: images
         public_folder: images
         i18n: true
-        fields: &about_fields
+        fields:
           - { label: Judul Utama Halaman, name: title, widget: string, default: About Us, i18n: true }
           - { label: Logo Perusahaan, name: logo, widget: image, required: false, i18n: duplicate }
           - { label: Gambar Header Sejarah, name: history_image, widget: image, required: false, i18n: true }
@@ -156,12 +156,7 @@ collections:
               - { label: Deskripsi, name: text, widget: text, i18n: true }
               - { label: Gambar Latar Belakang, name: bg_image, widget: image, required: false, i18n: duplicate }
 
-      - name: about_id
-        label: Tentang Kami
-        file: content/id/pages/about/about.md
-        media_folder: content/id/pages/about/images
-        public_folder: images
-        fields: *about_fields
+      
 
       - name: privacy-policy
         label: Privacy Policy
