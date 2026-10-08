@@ -108,7 +108,7 @@ collections:
       - name: about
         label: About Us
         file: content/{{locale}}/pages/about.md
-        media_folder: images 
+        media_folder: images
         public_folder: images
         i18n: true
         fields:
