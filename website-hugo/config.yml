@@ -110,8 +110,6 @@ collections:
       - name: about
         label: About Us
         file: content/{{locale}}/pages/about.md
-        media_folder: /static/images/about 
-        public_folder: /images/about
         i18n: true
         fields:
           - { label: Judul Utama Halaman, name: title, widget: string, default: About Us, i18n: true }
