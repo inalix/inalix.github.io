@@ -201,7 +201,7 @@ collections:
     path: "{{slug}}/index"
     i18n: true
     fields:
-      - { label: Name, name: name, widget: string, hint: Head Office, i18n: duplicate }
+      - { label: Name, name: name, widget: string, hint: "Ex: Head Office", i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: Address, name: address, widget: richtext, i18n: duplicate }
       - { label: Location, name: location, widget: string, i18n: duplicate }
