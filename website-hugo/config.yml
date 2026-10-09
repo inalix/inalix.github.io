@@ -43,10 +43,11 @@ collections:
       - { label: Image, name: image, widget: image, multiple: false, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
-      - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate, default: ["Projects"] }
+      - { label: Categories, name: categories, widget: relation, collection: solution, search_fields: ["name"], value_field: "name", display_fields: ["name"], i18n: duplicate }
+      
+     # - { label: Categories, name: categories, widget: list, multiple: false, i18n: duplicate, default: ["Projects"] }
       - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
-      - { label: Solution, name: solution, widget: relation, collection: solution, search_fields: ["name"], value_field: "name", display_fields: ["name"], i18n: duplicate }
       - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
       - { label: Location, name: location, widget: string, hint: 'Cth: Bali, Indonesia', required: false, i18n: duplicate }
       - { label: Client Name, name: client_name, widget: relation, collection: clients, search_fields: ["name"], value_field: "name", display_fields: ["name"], required: false, i18n: duplicate }
