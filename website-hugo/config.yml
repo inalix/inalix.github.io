@@ -190,7 +190,7 @@ collections:
             widget: list
             i18n: true
             fields:
-              - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: '{{slug}}', display_fields: ["name"], i18n: duplicate }
+              - { label: Office, name: office, widget: relation, collection: office, search_fields: ["office_type"], value_field: '{{slug}}', display_fields: ["office_type"], i18n: duplicate }
       
               - { label: Address, name: address, widget: text, i18n: duplicate }
               - { label: Phone, name: phone, widget: string, required: false, i18n: duplicate }
