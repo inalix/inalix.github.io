@@ -113,58 +113,58 @@ collections:
         # public_folder: images
         i18n: true
         fields:
-          - { label: Judul Utama Halaman, name: title, widget: string, default: About Us, i18n: true }
+          - { label: Main Page Title, name: title, widget: string, default: About Us, i18n: true }
           - { label: Type, name: type, widget: string, default: about, required: false, i18n: duplicate }
           - { label: Layout, name: layout, widget: string, default: list, required: false, i18n: duplicate }
-          - { label: Logo Perusahaan, name: logo, widget: image, required: false, i18n: duplicate }
-          - { label: Gambar Header Sejarah, name: history_image, widget: image, required: false, i18n: duplicate }
-          - { label: Judul Sejarah, name: history_title, widget: string, default: History Inalix, i18n: true }
-          - { label: Konten Teks Sejarah, name: body, widget: markdown, i18n: true }
-          - label: Banner Budaya Kerja
+          - { label: Company Logo, name: logo, widget: image, required: false, i18n: duplicate }
+          - { label: History Header Image, name: history_image, widget: image, required: false, i18n: duplicate }
+          - { label: History Title, name: history_title, widget: string, default: History Inalix, i18n: true }
+          - { label: History Content Text, name: body, widget: markdown, i18n: true }
+          - label: Work Culture Banner
             name: culture_banner
             widget: object
             i18n: true
             fields:
-              - { label: Judul Banner, name: title, widget: string, i18n: true }
-              - { label: Deskripsi, name: text, widget: text, i18n: true }
-              - label: Galeri Slider Gambar
+              - { label: Banner Title, name: title, widget: string, i18n: true }
+              - { label: Description, name: text, widget: text, i18n: true }
+              - label: Image Slider Gallery
                 name: images
                 widget: list
                 fields: 
-                  - { label: Gambar, name: image, widget: image, i18n: duplicate}
+                  - { label: Image, name: image, widget: image, i18n: duplicate}
 
-          - { label: Judul Seksi Nilai, name: values_title, widget: string, default: Komitmen kita adalah nilai-nilai kita., i18n: true }
-          - label: Daftar Nilai Perusahaan
+          - { label: Values Section Title, name: values_title, widget: string, default: Our commitment is our values., i18n: true }
+          - label: Company Values List
             name: values
             widget: list
             i18n: true
             fields:
-              - { label: Judul Nilai, name: title, widget: string, i18n: true }
-              - { label: Class Ikon, name: icon, widget: string, i18n: duplicate }
-              - { label: Deskripsi Penjelasan, name: description, widget: text, i18n: true }
+              - { label: Value Title, name: title, widget: string, i18n: true }
+              - { label: Icon Class, name: icon, widget: string, i18n: duplicate }
+              - { label: Explanation Description, name: description, widget: text, i18n: true }
 
-          - { label: Judul Seksi Solusi, name: solution_title, widget: string, default: Got a problem? We can give you the solution, i18n: true }
-          - { label: Deskripsi Solusi, name: solution_text, widget: text, i18n: true }
+          - { label: Solution Section Title, name: solution_title, widget: string, default: Got a problem? We can give you the solution, i18n: true }
+          - { label: Solution Description, name: solution_text, widget: text, i18n: true }
 
-          - { label: Banner Kutipan, name: banner_quote, widget: string, i18n: true }
+          - { label: Quote Banner, name: banner_quote, widget: string, i18n: true }
 
-          - label: Daftar FAQ
+          - label: FAQ List
             name: faqs
             widget: list
             i18n: true
             fields:
-              - { label: Pertanyaan, name: question, widget: string, i18n: true }
-              - { label: Jawaban, name: answer, widget: markdown, i18n: true }
+              - { label: Question, name: question, widget: string, i18n: true }
+              - { label: Answer, name: answer, widget: markdown, i18n: true }
 
-          - label: Card Sidebar Kanan
+          - label: Right Sidebar Card
             name: sidebar_card
             widget: object
             i18n: true
             fields:
-              - { label: Judul Card, name: title, widget: string, default: OPERATIONAL EXCELLENCE, i18n: true }
-              - { label: Ikon Class, name: icon, widget: string, default: stmicon-notebook_b, i18n: duplicate }
-              - { label: Deskripsi, name: text, widget: text, i18n: true }
-              - { label: Gambar Latar Belakang, name: bg_image, widget: image, required: false, i18n: duplicate }
+              - { label: Card Title, name: title, widget: string, default: OPERATIONAL EXCELLENCE, i18n: true }
+              - { label: Icon Class, name: icon, widget: string, default: stmicon-notebook_b, i18n: duplicate }
+              - { label: Description, name: text, widget: text, i18n: true }
+              - { label: Background Image, name: bg_image, widget: image, required: false, i18n: duplicate }
 
       
 
@@ -184,16 +184,17 @@ collections:
         file: content/{{locale}}/pages/contact.md
         i18n: true
         fields:
-          - { label: "Judul", name: "title", widget: "string", default: "Contact Us" }
-          - label: "Daftar Kantor"
-            name: "offices"
-            widget: "list"
+          - { label: Title, name: title, widget: string, default: Contact Us }
+          - label: Offices List
+            name: offices
+            widget: list
             i18n: true
             fields:
-              - { label: "Nama Kantor", name: "name", widget: "string", i18n: duplicate }
-              - { label: "Alamat", name: "address", widget: "text", i18n: duplicate }
-              - { label: "Telepon", name: "phone", widget: "string", required: false, i18n: duplicate }
-              - { label: "Jam Operasional", name: "hours", widget: "string", required: false, i18n: duplicate }
+              - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: '{{slug}}', display_fields: ["name"], i18n: duplicate }
+      
+              - { label: Address, name: address, widget: text, i18n: duplicate }
+              - { label: Phone, name: phone, widget: string, required: false, i18n: duplicate }
+              - { label: Operational Hours, name: hours, widget: string, required: false, i18n: duplicate }
 
   - name: office
     label: Offices
@@ -203,11 +204,14 @@ collections:
     path: "{{slug}}/index"
     i18n: true
     fields:
-      - { label: Name, name: name, widget: string, i18n: duplicate }
+      - { label: Office Type, name: office_type, widget: string, hint: Head Office, i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: Address, name: address, widget: richtext, i18n: duplicate }
-      - { label: Location, name: point, widget: map, required: false, i18n: duplicate}
-      - { label: Nomor Telepon, name: phone, widget: string, required: false, i18n: duplicate }
+      - { label: Location, name: location, widget: string, i18n: duplicate }
+      - { label: Point Location, name: point, widget: map, required: false, i18n: duplicate}
+      - { label: Phone Number, name: phone, widget: string, required: false, i18n: duplicate }
+      - { label: Email Address, name: email, widget: string, required: false, i18n: duplicate }
+      - { label: Operational Hours, name: hours, widget: string, required: false, i18n: duplicate }
       - { label: Icon, name: icon, widget: string, required: false, i18n: duplicate}
   
   - name: division
@@ -234,7 +238,7 @@ collections:
       - { label: Profile Picture, name: photo, widget: image, i18n: duplicate }
       - { label: Job Title, name: title, widget: string, i18n: duplicate }
       - { label: Division, name: division, widget: relation, collection: division, default: "project", search_fields: ["name"], value_field: "{{slug}}", display_fields: ["name"], i18n: duplicate }
-      - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: "{{slug}}", display_fields: ["name"], i18n: duplicate }
+      - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: '{{slug}}', display_fields: ["name"], i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: Body, name: body, widget: richtext, required: false, i18n: duplicate }
 
