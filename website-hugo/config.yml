@@ -196,7 +196,7 @@ collections:
   - name: office
     label: Offices
     label_singular: Office
-    identifier_field: office_type
+    identifier_field: name
     folder: content/{{locale}}/office
     path: "{{slug}}/index"
     i18n: true
