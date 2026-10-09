@@ -190,21 +190,18 @@ collections:
             widget: list
             i18n: true
             fields:
-              - { label: Office, name: office, widget: relation, collection: office, search_fields: ["office_type"], value_field: '{{slug}}', display_fields: ["office_type"], i18n: duplicate }
+              - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: '{{slug}}', display_fields: ["name"], i18n: duplicate }
       
-              - { label: Address, name: address, widget: text, i18n: duplicate }
-              - { label: Phone, name: phone, widget: string, required: false, i18n: duplicate }
-              - { label: Operational Hours, name: hours, widget: string, required: false, i18n: duplicate }
 
   - name: office
     label: Offices
     label_singular: Office
-    identifier_field: name
-    folder: /content/{{locale}}/office
+    identifier_field: office_type
+    folder: content/{{locale}}/office
     path: "{{slug}}/index"
     i18n: true
     fields:
-      - { label: Office Type, name: office_type, widget: string, hint: Head Office, i18n: duplicate }
+      - { label: Name, name: name, widget: string, hint: Head Office, i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: Address, name: address, widget: richtext, i18n: duplicate }
       - { label: Location, name: location, widget: string, i18n: duplicate }
