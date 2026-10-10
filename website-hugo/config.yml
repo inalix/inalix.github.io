@@ -184,7 +184,7 @@ collections:
         file: content/{{locale}}/pages/contact.md
         i18n: true
         fields:
-          - { label: Title, name: title, widget: string, default: Contact Us }
+          - { label: Title, name: title, widget: string, default: Contact Us, i18n: true }
           - label: Offices List
             name: offices
             widget: list
