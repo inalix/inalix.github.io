@@ -238,7 +238,7 @@ collections:
       - { label: Division, name: division, widget: relation, collection: division, default: "project", search_fields: ["name"], value_field: "{{slug}}", display_fields: ["name"], i18n: duplicate }
       - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: '{{slug}}', display_fields: ["name"], i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
-      - { label: Body, name: body, widget: richtext, required: false, i18n: duplicate }
+      - { label: Body, name: body, widget: richtext, required: false, i18n: true }
 
   - name: clients
     label: Clients 
@@ -256,7 +256,20 @@ collections:
       - { label: Image, name: image, widget: image, required: true, i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
 
-  
+  - name: testimonials
+    label: Testimonials
+    label_singular: Testimonial
+    identifier_field: name
+    folder: /content/{{locale}}/testimonials
+    preview: false
+    i18n: true
+    fields:
+      - { label: Name, name: name, widget: string, i18n: duplicate }
+      - { label: Position, name: designation, widget: string, i18n: duplicate }
+      - { label: Image, name: image, widget: image, multiple: false, i18n: duplicate, required: false }
+      - { label: Draft, name: draft, widget: boolean, required: false, default: false, i18n: duplicate }
+      - { label: Body, name: body, widget: richtext, required: false, i18n: true }
+    
   - name: solution
     label: Solutions
     label_singular: Solution
