@@ -232,14 +232,6 @@ collections:
     i18n: true
     fields:
       - { label: Name, name: name, widget: string, i18n: duplicate }
-      - label: "URL Slug (CRITICAL)"
-        name: "slug"
-        widget: "string"
-        required: true
-        hint: "⚠️ MUST MATCH THE OLD URL (e.g., 'nanda'). If changed, existing printed physical barcodes will break!"
-        pattern: 
-          - '^[a-z0-9-]+$'
-          - 'Use only lowercase letters, numbers, and hyphens (-). No spaces or uppercase letters allowed.'
       - { label: URL Slug (CRITICAL), name: slug, widget: string,required: true, hint: ⚠️ MUST MATCH THE OLD URL (e.g., 'nanda'). If changed, existing printed physical barcodes will break!, pattern: ['^[a-z0-9-]+$', 'Use only lowercase letters, numbers, and hyphens (-). No spaces or uppercase letters allowed.'], i18n: duplicate }
       - { label: Profile Picture, name: photo, widget: image, i18n: duplicate }
       - { label: Job Title, name: title, widget: string, i18n: duplicate }
