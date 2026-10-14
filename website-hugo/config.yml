@@ -70,7 +70,8 @@ collections:
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Categories, name: categories, widget: hidden, default: 'Information Technology', multiple: false, i18n: duplicate }
-      - { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Information Technology (IT), value: IT}, {label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}] }
+      #- { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Information Technology (IT), value: IT}, {label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}] }
+      - { label: Sub-categories, name: sub_categories, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
       - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
@@ -95,7 +96,8 @@ collections:
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Categories, name: categories, widget: hidden, default: 'Industry', multiple: false, i18n: duplicate }
-      - { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Information Technology (IT), value: IT}, {label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}] }
+      #- { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Information Technology (IT), value: IT}, {label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}] }
+      - { label: Sub-categories, name: sub_categories, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
       - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
@@ -146,7 +148,8 @@ collections:
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Date, name: date, widget: datetime, type: date, required: false, i18n: duplicate }
       - { label: Categories, name: categories, widget: hidden, default: 'Airport Solutions', multiple: false, i18n: duplicate }
-      - { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Information Technology (IT), value: IT}, {label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}] }
+      #- { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Information Technology (IT), value: IT}, {label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}] }
+      - { label: Sub-categories, name: sub_categories, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate }
       - { label: Gallery, name: gallery, widget: image, multiple: true, required: false, i18n: duplicate }
@@ -168,7 +171,8 @@ collections:
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Date, name: date, widget: datetime, type: date, required: false, i18n: duplicate }
-      - { label: Categories, name: categories, widget: hidden, default: 'Industrial Solutions', multiple: false, i18n: duplicate }
+      #- { label: Categories, name: categories, widget: hidden, default: 'Industrial Solutions', multiple: false, i18n: duplicate }
+      - { label: Sub-categories, name: sub_categories, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}, {label: Information Technology (IT), value: IT}] }
       - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate }
