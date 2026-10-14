@@ -55,6 +55,56 @@ collections:
       - { label: Completed Year, name: completed, widget: string, hint: 'Cth: 2010', required: false, i18n: duplicate }
       - { label: Body, name: body, widget: richtext, i18n: true }
       
+  - name: information_technology_projects
+    label: Projects - Information Technology (IT)
+    label_singular: Project - Information Technology (IT) 
+    folder: /content/{{locale}}/projects/information-technology
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
+      - { label: Image, name: image, widget: image, multiple: false, i18n: duplicate }
+      - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
+      - { label: Description, name: description, widget: string, i18n: true }
+      - { label: Categories, name: categories, widget: hidden, default: 'Information Technology', multiple: false, i18n: duplicate }
+      - { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Information Technology (IT), value: IT}, {label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}] }
+      - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
+      - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
+      - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
+      - { label: Location, name: location, widget: string, hint: 'Cth: Bali, Indonesia', required: false, i18n: duplicate }
+      - { label: Client Name, name: client_name, widget: relation, collection: clients, search_fields: ["name"], value_field: "name", display_fields: ["name"], required: false, i18n: duplicate }
+      - { label: Started Year, name: started, widget: string, hint: 'Cth: 2001', required: false, i18n: duplicate }
+      - { label: Completed Year, name: completed, widget: string, hint: 'Cth: 2010', required: false, i18n: duplicate }
+      - { label: Body, name: body, widget: richtext, i18n: true }
+  
+  - name: industry_projects
+    label: Projects - Industry
+    label_singular: Project - Industry 
+    folder: /content/{{locale}}/projects/industry
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
+      - { label: Image, name: image, widget: image, multiple: false, i18n: duplicate }
+      - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
+      - { label: Description, name: description, widget: string, i18n: true }
+      - { label: Categories, name: categories, widget: hidden, default: 'Industry', multiple: false, i18n: duplicate }
+      - { label: Sub-categories, name: sub_categories, widget: select, create: true, multiple: false, i18n: duplicate, required: false, options: [{label: Information Technology (IT), value: IT}, {label: Electrical Systems, value: electrical}, {label: Telecommunication, value: telecom}, {label: Control & Instrument, value: control-instrument}, {label: Mechanical, value: mechanical}, {label: Fire Safety, value: fire-safety}, {label: Electronical, value: electronical}] }
+      - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
+      - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
+      - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
+      - { label: Location, name: location, widget: string, hint: 'Cth: Bali, Indonesia', required: false, i18n: duplicate }
+      - { label: Client Name, name: client_name, widget: relation, collection: clients, search_fields: ["name"], value_field: "name", display_fields: ["name"], required: false, i18n: duplicate }
+      - { label: Started Year, name: started, widget: string, hint: 'Cth: 2001', required: false, i18n: duplicate }
+      - { label: Completed Year, name: completed, widget: string, hint: 'Cth: 2010', required: false, i18n: duplicate }
+      - { label: Body, name: body, widget: richtext, i18n: true }
+
   - name: products
     label: Products
     label_singular: Product
@@ -81,7 +131,7 @@ collections:
 
   - name: airport_solutions
     label: Products - Airport Solutions
-    label_singular: Products - Airport Solution
+    label_singular: Product - Airport Solution
     folder: /content/{{locale}}/products/airport-solutions
     path: "{{slug}}/index"
     media_folder: images
@@ -104,7 +154,7 @@ collections:
 
   - name: industrial_solutions
     label: Products - Industrial Solutions
-    label_singular: Products - Industrial Solution
+    label_singular: Product - Industrial Solution
     folder: /content/{{locale}}/products/industrial-solutions
     path: "{{slug}}/index"
     media_folder: images
