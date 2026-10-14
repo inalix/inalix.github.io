@@ -371,11 +371,9 @@ collections:
   - name: sub_categories
     label: Sub-categories
     label_singular: sub-category
-    identifier_field: name
-    folder: /content/{{locale}}/sub-categories
+    folder: content/{{locale}}/sub-categories
     i18n: true
     slug: '{{slug}}'
-    summary: '{{title}}'
     fields:
       - { label: Title, name: title, widget: string, i18n: duplicate}
 
