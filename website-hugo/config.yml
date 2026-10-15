@@ -121,6 +121,15 @@ collections:
           #- { label: Company Logo, name: logo, widget: image, required: false, i18n: duplicate }
           - { label: History Header Image, name: history_image, widget: image, required: false, i18n: duplicate }
           - { label: History Title, name: history_title, widget: string, default: History Inalix, i18n: true }
+          - label: History Timeline Milestones
+            name: timeline
+            widget: list
+            i18n: true
+            fields:
+              - { label: Year, name: year, widget: string, i18n: duplicate }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Description, name: description, widget: markdown, i18n: true }
+              - { label: Milestone Image, name: image, widget: image, required: false, i18n: duplicate }
           - { label: History Content Text, name: body, widget: markdown, i18n: true }
           - label: Work Culture Banner
             name: culture_banner
@@ -194,6 +203,113 @@ collections:
             fields:
               - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: '{{slug}}', display_fields: ["name"], i18n: duplicate }
       
+
+  - name: home_page
+    label: Home Page
+    files:
+      - name: home
+        label: Home Page
+        file: content/{{locale}}/_index.md
+        i18n: true
+        fields:
+          - label: Hero Sliders
+            name: hero_sliders
+            widget: list
+            i18n: true
+            fields:
+              - { label: Badge, name: badge, widget: string, i18n: true }
+              - { label: Icon Class, name: icon, widget: string, i18n: duplicate }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Description, name: description, widget: text, i18n: true }
+              - { label: Image, name: image, widget: image, i18n: duplicate }
+              - label: Primary Button
+                name: button_primary
+                widget: object
+                fields:
+                  - { label: Enable, name: enable, widget: boolean, default: true, i18n: duplicate }
+                  - { label: Label, name: label, widget: string, i18n: true }
+                  - { label: Link, name: link, widget: string, i18n: duplicate }
+              - label: Secondary Button
+                name: button_secondary
+                widget: object
+                fields:
+                  - { label: Enable, name: enable, widget: boolean, default: true, i18n: duplicate }
+                  - { label: Label, name: label, widget: string, i18n: true }
+                  - { label: Link, name: link, widget: string, i18n: duplicate }
+              - { label: Highlights, name: highlights, widget: list, i18n: true }
+          - label: Transforming Space Section
+            name: transforming_space
+            widget: object
+            i18n: true
+            fields:
+              - { label: Subtitle, name: subtitle, widget: string, i18n: true }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Content, name: content, widget: text, i18n: true }
+              - { label: Image, name: image, widget: image, i18n: duplicate }
+          - label: Our Services Accordion
+            name: our_services
+            widget: object
+            i18n: true
+            fields:
+              - { label: Subtitle, name: subtitle, widget: string, i18n: true }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - label: Service Items
+                name: items
+                widget: list
+                i18n: true
+                fields:
+                  - { label: Title, name: title, widget: string, i18n: true }
+                  - { label: Description, name: description, widget: text, i18n: true }
+                  - { label: Image, name: image, widget: image, i18n: duplicate }
+          - label: Why Choose Us Section
+            name: why_choose_us
+            widget: object
+            i18n: true
+            fields:
+              - { label: Subtitle, name: subtitle, widget: string, i18n: true }
+              - { label: Title, name: title, widget: string, i18n: true }
+              - { label: Button Label, name: button_label, widget: string, i18n: true }
+              - { label: Button Link, name: button_link, widget: string, i18n: duplicate }
+              - label: Items
+                name: items
+                widget: list
+                i18n: true
+                fields:
+                  - { label: Title, name: title, widget: string, i18n: true }
+                  - { label: Description, name: description, widget: text, i18n: true }
+
+  - name: page_banners
+    label: Page Banners & SEO
+    files:
+      - name: projects_index
+        label: Projects List Page
+        file: content/{{locale}}/projects/_index.md
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Banner Image, name: image, widget: image, i18n: duplicate }
+          - { label: Meta Title, name: meta_title, widget: string, required: false, i18n: true }
+          - { label: Description, name: description, widget: text, required: false, i18n: true }
+
+      - name: products_index
+        label: Products List Page
+        file: content/{{locale}}/products/_index.md
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Banner Image, name: image, widget: image, i18n: duplicate }
+          - { label: Meta Title, name: meta_title, widget: string, required: false, i18n: true }
+          - { label: Description, name: description, widget: text, required: false, i18n: true }
+
+      - name: news_index
+        label: News List Page
+        file: content/{{locale}}/news/_index.md
+        i18n: true
+        fields:
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Banner Image, name: image, widget: image, i18n: duplicate }
+          - { label: Meta Title, name: meta_title, widget: string, required: false, i18n: true }
+          - { label: Description, name: description, widget: text, required: false, i18n: true }
 
   - name: office
     label: Offices
