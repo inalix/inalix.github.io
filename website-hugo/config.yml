@@ -254,7 +254,7 @@ collections:
     i18n: true
     fields:
       - { label: Name, name: name, widget: string, i18n: duplicate }
-      - { label: Address, name: address, widget: richtext, i18n: duplicate }
+      - { label: Address, name: address, widget: text, required: false, i18n: duplicate }
       - { label: Image, name: image, widget: image, required: true, i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
 
