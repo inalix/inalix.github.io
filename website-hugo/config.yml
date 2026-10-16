@@ -202,7 +202,51 @@ collections:
             i18n: true
             fields:
               - { label: Office, name: office, widget: relation, collection: office, search_fields: ["name"], value_field: '{{slug}}', display_fields: ["name"], i18n: duplicate }
-      
+
+      - name: products_airport
+        label: 'Products: Airport Solutions'
+        file: content/{{locale}}/products/airport-solutions/_index.md
+        i18n: true
+        fields:
+          - { label: Page Title, name: title, widget: string, default: Airport Solutions, i18n: true }
+          - { label: Category Filter, name: category, widget: hidden, default: Airport Solutions }
+          - { label: Header Banner Image, name: image, widget: image, i18n: duplicate }
+          - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
+          - { label: Description, name: description, widget: string, required: false, i18n: true }
+
+      - name: products_industry
+        label: 'Products: Industrial Solutions'
+        file: content/{{locale}}/products/industrial-solutions/_index.md
+        i18n: true
+        fields:
+          - { label: Page Title, name: title, widget: string, default: Industrial Solutions, i18n: true }
+          - { label: Category Filter, name: category, widget: hidden, default: Industrial Solutions }
+          - { label: Header Banner Image, name: image, widget: image, i18n: duplicate }
+          - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
+          - { label: Description, name: description, widget: string, required: false, i18n: true }
+
+      - name: projects_it
+        label: 'Projects: Information Technology'
+        file: content/{{locale}}/projects/information-technology/_index.md
+        i18n: true
+        fields:
+          - { label: Page Title, name: title, widget: string, default: Information Technology, i18n: true }
+          - { label: Category Filter, name: category, widget: hidden, default: Information Technology }
+          - { label: Header Banner Image, name: image, widget: image, i18n: duplicate }
+          - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
+          - { label: Description, name: description, widget: string, required: false, i18n: true }
+
+      - name: projects_industry
+        label: 'Projects: Industry'
+        file: content/{{locale}}/projects/industry/_index.md
+        i18n: true
+        fields:
+          - { label: Page Title, name: title, widget: string, default: Industry Projects, i18n: true }
+          - { label: Category Filter, name: category, widget: hidden, default: Industry }
+          - { label: Header Banner Image, name: image, widget: image, i18n: duplicate }
+          - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
+          - { label: Description, name: description, widget: string, required: false, i18n: true }
+
 
   - name: home_page
     label: Home Page
