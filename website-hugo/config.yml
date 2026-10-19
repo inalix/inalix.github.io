@@ -3,7 +3,7 @@
 backend:
   name: github
   repo: inalix/website-hugo
-  branch: main
+  branch: v2.1
   base_url: https://sve-auth.styawan.workers.dev
 
 i18n:
