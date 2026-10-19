@@ -329,6 +329,7 @@ collections:
 
   - name: page_banners
     label: Page Banners & SEO
+    i18n: true
     files:
       - name: projects_index
         label: Projects List Page
