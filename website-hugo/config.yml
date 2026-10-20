@@ -67,7 +67,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
       - { label: Slug, name: slug, widget: string, required: false, i18n: duplicate }
-      - { label: Image, name: image, widget: image, i18n: duplicate }
+      - { label: Image, name: image, widget: image, i18n: duplicate, required: false }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Date, name: date, widget: datetime, type: date, required: false, i18n: duplicate }
