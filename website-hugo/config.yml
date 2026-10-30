@@ -480,3 +480,169 @@ collections:
     i18n: true
     fields:
       - { label: Solution Name, name: name, widget: string, i18n: duplicate }
+  
+  
+  
+  
+  - name: logos
+    label: Logos & Branding
+    label_singular: Logo
+    identifier_field: name
+    folder: content/{{locale}}/logos
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    summary: '{{name}} ({{category}})'
+    i18n: true
+    fields:
+      - { label: Brand / App Name, name: name, widget: string, hint: "Ex: INALIX, X-AAS, AODB, RMS", i18n: duplicate }
+      - { label: Custom Slug / Folder Name, name: slug, widget: string, required: false, hint: "Opsional. Kosongkan jika ingin otomatis dari nama (ex: inalix, aodb)", i18n: duplicate }
+      - { label: Category, name: category, widget: select, options: ['Corporate Logo (Kantor)', 'Application Logo (Aplikasi)'], default: 'Application Logo (Aplikasi)', i18n: duplicate }
+      - { label: Notes, name: notes, widget: string, required: false, hint: "Catatan pedoman warna atau penggunaan (opsional)", i18n: duplicate }
+
+     
+      - label: Brand Guidelines & Master Files
+        name: guidelines
+        widget: object
+        required: false
+        fields:
+          - { label: Guideline Document (PDF), name: pdf, widget: file, required: false, hint: "Upload PDF pedoman logo (ex: Logo_Guideline_AAS.pdf)", i18n: duplicate }
+          - { label: All Assets Master (ZIP), name: zip, widget: file, required: false, hint: "Upload file ZIP berisi seluruh aset lengkap", i18n: duplicate }
+
+      
+      - label: Horizontal Logo (Landscape)
+        name: horizontal
+        widget: object
+        required: false
+        fields:
+          - label: Full Color (Default - Latar Terang)
+            name: full_color
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Default 200px PNG, Default 20cm PNG, SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Dark Mode (Aksen Warna + Putih)
+            name: dark_mode
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Default White 200px PNG, Default White SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Full White (100% Putih Polos)
+            name: full_white
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Full White 200px PNG, Full White SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Full Black (100% Hitam Polos)
+            name: full_black
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Black 200px PNG, Black SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+      
+      - label: Vertical Logo (Stacked)
+        name: vertical
+        widget: object
+        required: false
+        fields:
+          - label: Full Color (Default - Latar Terang)
+            name: full_color
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Vertical 200px PNG, Vertical SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Dark Mode (Aksen Warna + Putih)
+            name: dark_mode
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Vertical Dark 200px PNG, SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Full White (100% Putih Polos)
+            name: full_white
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Vertical Full White 200px PNG, SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Full Black (100% Hitam Polos)
+            name: full_black
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Vertical Black 200px PNG, SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+     
+      - label: Square / Icon Mark (Symbol Only)
+        name: square
+        widget: object
+        required: false
+        fields:
+          - label: Full Color (Default - Latar Terang)
+            name: full_color
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Square Default 200px PNG, SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Dark Mode (Aksen Warna + Putih)
+            name: dark_mode
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Square Default White 200px PNG, SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Full White (100% Putih Polos)
+            name: full_white
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Square White 200px PNG, SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
+
+          - label: Full Black (100% Hitam Polos)
+            name: full_black
+            widget: list
+            required: false
+            i18n: duplicate
+            summary: '{{title}}'
+            fields:
+              - { label: File Label / Name, name: title, widget: string, hint: "Ex: Square Black 200px PNG, SVG", i18n: duplicate }
+              - { label: File, name: file, widget: file, i18n: duplicate }
