@@ -40,7 +40,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
       - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
-      - { label: Image, name: image, widget: image, multiple: false, i18n: duplicate }
+      - { label: Image, name: image, widget: image, multiple: false, required: false, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
       - { label: Description, name: description, widget: string, i18n: true }
       - { label: Categories, name: categories, widget: select, options: ['Information Technology','Industry'], multiple: false, i18n: duplicate }
