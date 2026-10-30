@@ -47,10 +47,10 @@ collections:
       - { label: Tags, name: tags, widget: list, multiple: true, i18n: duplicate, required: false }
       - { label: Author, name: author, widget: relation, collection: team, search_fields: ["name", "title"], value_field: "name", display_fields: ["name", "title"], i18n: duplicate } 
       - { label: Date, name: date, widget: datetime, type: date, i18n: duplicate }
-      - { label: Location, name: location, widget: string, hint: 'Cth: Bali, Indonesia', required: false, i18n: duplicate }
+      - { label: Location, name: location, widget: string, hint: 'Ex: Bali, Indonesia', required: false, i18n: duplicate }
       - { label: Client Name, name: client_name, widget: relation, collection: clients, search_fields: ["name"], value_field: "name", display_fields: ["name"], required: false, i18n: duplicate }
-      - { label: Started Year, name: started, widget: string, hint: 'Cth: 2001', required: false, i18n: duplicate }
-      - { label: Completed Year, name: completed, widget: string, hint: 'Cth: 2010', required: false, i18n: duplicate }
+      - { label: Started Year, name: started, widget: string, hint: 'Ex: 2001', required: false, i18n: duplicate }
+      - { label: Completed Year, name: completed, widget: string, hint: 'Ex: 2010', required: false, i18n: duplicate }
       - { label: Body, name: body, widget: richtext, i18n: true }
       
   
@@ -103,6 +103,29 @@ collections:
       - { label: Update Date, name: date_update, widget: datetime, type: date, required: false, i18n: duplicate }
       - { label: Body, name: body, widget: richtext, i18n: true }
 
+  - name: history_projects
+    label: Project History
+    label_singular: Project History
+    identifier_field: name
+    folder: content/{{locale}}/history_projects
+    path: "{{slug}}/index"
+    media_folder: images
+    public_folder: images
+    summary: '{{name}} ({{year}}) — {{client}}'
+    sortable_fields: ['name', 'year', 'client', 'category']
+    i18n: true
+    fields:
+      - { label: Project Name, name: name, widget: string, i18n: true }
+      - { label: Category, name: category, widget: select, options: ['IT', 'Industrial'], default: 'IT', i18n: duplicate }
+      - { label: Customer / End User, name: client, widget: string, i18n: duplicate }
+      - { label: Location, name: location, widget: string, required: false, i18n: duplicate }
+      - { label: Year, name: year, widget: string, hint: 'Ex: 2024', required: false, i18n: duplicate }
+      - { label: Started Year, name: started, widget: string, hint: 'Ex: 2021', required: false, i18n: duplicate }
+      - { label: Completed Year, name: completed, widget: string, hint: 'Ex: 2024', required: false, i18n: duplicate }
+      - { label: Draft, name: draft, widget: boolean, default: false, i18n: duplicate }
+
+
+
   - name: pages
     label: Pages
     label_singular: Page
@@ -120,7 +143,7 @@ collections:
           - { label: Layout, name: layout, widget: string, default: list, required: false, i18n: duplicate }
           #- { label: Company Logo, name: logo, widget: image, required: false, i18n: duplicate }
           - { label: History Header Image, name: history_image, widget: image, required: false, i18n: duplicate }
-          - { label: History Title, name: history_title, widget: string, default: History Inalix, i18n: true }
+          - { label: History Title, name: history_title, widget: string, default: Inalix History, i18n: true }
           - label: History Timeline Milestones
             name: timeline
             widget: list
@@ -152,7 +175,7 @@ collections:
             fields:
               - { label: Value Title, name: title, widget: string, i18n: true }
               - { label: Icon Class, name: icon, widget: string, i18n: duplicate }
-              - { label: Explanation Description, name: description, widget: text, i18n: true }
+              - { label: Description, name: description, widget: text, i18n: true }
 
           - { label: Solution Section Title, name: solution_title, widget: string, default: Got a problem? We can give you the solution, i18n: true }
           - { label: Solution Description, name: solution_text, widget: text, i18n: true }
@@ -381,18 +404,18 @@ collections:
   
   - name: division
     label: Divisions
-    label_singular: division
+    label_singular: Division
     identifier_field: name
     folder: content/{{locale}}/division
     preview: false
     i18n: true
     fields:
-      - { label: Name Division, name: name, widget: string, i18n: duplicate }
+      - { label: Division Name, name: name, widget: string, i18n: duplicate }
 
   - name: team
     label: Teams
     identifier_field: name
-    label_singular: team
+    label_singular: Team
     folder: content/{{locale}}/team
     path: "{{slug}}/index"
     media_folder: images
@@ -411,7 +434,7 @@ collections:
   - name: clients
     label: Clients 
     identifier_field: name
-    label_singular: client
+    label_singular: Client
     folder: content/{{locale}}/clients
     path: "{{slug}}/index"
     media_folder: images
@@ -440,7 +463,7 @@ collections:
 
   - name: sub_categories
     label: Sub-categories
-    label_singular: sub-category
+    label_singular: Sub-category
     folder: content/{{locale}}/sub-categories
     i18n: true
     slug: '{{slug}}'
