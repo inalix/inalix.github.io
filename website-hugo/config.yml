@@ -499,4 +499,4 @@ collections:
       - { label: Category, name: category, widget: select, options: ['Corporate Logo (Kantor)', 'Application Logo (Aplikasi)'], default: 'Application Logo (Aplikasi)' }
       - { label: File Logo, name: files, widget: file, multiple: true }
       - { label: Description, name: description, widget: string, required: false }
-      - { label: Tags, name: tags, widget: list }
+      - { label: Tags, name: tags, widget: list, delimiter: "," }
