@@ -492,7 +492,7 @@ collections:
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
-    summary: '{{name}} - ({{category}})'
+    summary: '{{name}} - {{category}}'
     i18n: false
     fields:
       - { label: Logo Name, name: name, widget: string, hint: "Ex: Logo Inalix Default" }
