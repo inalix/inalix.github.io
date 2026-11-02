@@ -115,7 +115,7 @@ collections:
     sortable_fields: ['name', 'year', 'client', 'category']
     i18n: true
     fields:
-      - { label: Project Name, name: name, widget: string, i18n: true }
+      - { label: Project Name, name: name, widget: string, i18n: duplicate }
       - { label: Category, name: category, widget: select, options: ['IT', 'Industrial'], default: 'IT', i18n: duplicate }
       - { label: Customer / End User, name: client, widget: string, i18n: duplicate }
       - { label: Location, name: location, widget: string, required: false, i18n: duplicate }
@@ -488,7 +488,7 @@ collections:
     label: Logos & Branding
     label_singular: Logo
     identifier_field: name
-    folder: content/{{locale}}/logos
+    folder: content/logos
     path: "{{slug}}/index"
     media_folder: images
     public_folder: images
