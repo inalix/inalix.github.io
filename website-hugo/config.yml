@@ -39,6 +39,7 @@ collections:
     i18n: true
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Slug URL, name: slug, widget: string, required: false, pattern: ['^[a-z0-9-]+$', "Hanya boleh huruf kecil, angka, dan tanda hubung (-)"], hint: "Opsional. Jika kosong, slug otomatis dibuat dari judul.", i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
       - { label: Image, name: image, widget: image, multiple: false, required: false, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
@@ -91,6 +92,7 @@ collections:
     i18n: true
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Slug URL, name: slug, widget: string, required: false, pattern: ['^[a-z0-9-]+$', "Hanya boleh huruf kecil, angka, dan tanda hubung (-)"], hint: "Opsional. Jika kosong, slug otomatis dibuat dari judul.", i18n: duplicate }
       - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
       - { label: Image, name: image, widget: image, multiple: false, i18n: duplicate }
       - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
@@ -139,6 +141,7 @@ collections:
         i18n: true
         fields:
           - { label: Main Page Title, name: title, widget: string, default: About Us, i18n: true }
+          - { label: Slug URL, name: slug, widget: string, required: false, pattern: ['^[a-z0-9-]+$', "Hanya boleh huruf kecil, angka, dan tanda hubung (-)"], hint: "Opsional. Default: about. Isi 'about-us' jika ingin URL menjadi /about-us", i18n: duplicate }
           - { label: Type, name: type, widget: string, default: about, required: false, i18n: duplicate }
           - { label: Layout, name: layout, widget: string, default: list, required: false, i18n: duplicate }
           #- { label: Company Logo, name: logo, widget: image, required: false, i18n: duplicate }
@@ -208,6 +211,7 @@ collections:
         i18n: true
         fields:
           - { label: Title, name: title, widget: string, i18n: true }
+          - { label: Slug URL, name: slug, widget: string, required: false, pattern: ['^[a-z0-9-]+$', "Hanya boleh huruf kecil, angka, dan tanda hubung (-)"], hint: "Opsional. Default: privacy-policy", i18n: duplicate }
           - { label: Meta Title, name: meta_title, widget: compute, value: '{{fields.title}} | INALIX', i18n: true }
           - { label: Description, name: description, widget: string, required: false, i18n: true }
           - { label: Draft, name: draft, widget: boolean, i18n: duplicate }
@@ -219,6 +223,7 @@ collections:
         i18n: true
         fields:
           - { label: Title, name: title, widget: string, default: Contact Us, i18n: true }
+          - { label: Slug URL, name: slug, widget: string, required: false, pattern: ['^[a-z0-9-]+$', "Hanya boleh huruf kecil, angka, dan tanda hubung (-)"], hint: "Opsional. Default: contact", i18n: duplicate }
           - label: Offices List
             name: offices
             widget: list
